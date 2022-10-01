@@ -1,9 +1,18 @@
-const one = document.getElementById("one-btn");
-one.addEventListener("click", (e) => {
-  console.log(e);
+const oneBtn = document.getElementById("one-btn");
+
+const screenInput = document.getElementById("number-btn");
+const getAttrib = oneBtn.getAttribute("number-btn");
+
+oneBtn.addEventListener("click", (e) => {
+  console.log(e.target.textContent);
 });
 
-const two = document.getElementById("two-btn");
-two.addEventListener("click", (e) => {
-  console.log(e);
+const twoBtn = document.getElementById("two-btn");
+twoBtn.addEventListener("click", (e) => {
+  console.log(e.target.textContent);
+});
+
+const threeBtn = document.getElementById("three-btn");
+threeBtn.addEventListener("click", (e) => {
+  console.log(e.target.textContent);
 });
