@@ -21,3 +21,16 @@ threeBtn.addEventListener("click", (e) => {
   console.log(e.target.textContent);
   setInputValue(e.target.textContent);
 });
+
+// 1st goal - create CE(clear) button
+// click on any button
+// value just clicked should show up in input
+// click on CE
+// value input should be clear
+
+// 2nd goal - add 1 + 1 to equal 2
+// click on number 1
+// click on +
+// click on 1
+// click on =
+// number in input should read as 2
