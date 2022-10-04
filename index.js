@@ -22,6 +22,11 @@ threeBtn.addEventListener("click", (e) => {
   setInputValue(e.target.textContent);
 });
 
+const clearBtn = document.getElementById("ce-btn");
+clearBtn.addEventListener("click", (e) => {
+  setInputValue(" ");
+});
+
 // 1st goal - create CE(clear) button
 // click on any button
 // value just clicked should show up in input
