@@ -3,8 +3,13 @@ function setInputValue(btnValue) {
   screenInput.value = btnValue;
 }
 
+function convertStringToNumber() {
+  Number(oneBtn);
+  Number(twoBtn);
+  Number(threeBtn);
+}
+
 let oneBtn = document.getElementById("one-btn");
-Number(oneBtn);
 oneBtn.addEventListener("click", (e) => {
   console.log(e.target.textContent);
   setInputValue(e.target.textContent);
@@ -28,7 +33,8 @@ clearBtn.addEventListener("click", (e) => {
 });
 
 console.log(typeof oneBtn.textContent);
-console.log(typeof twoBtn);
+console.log(typeof Number(oneBtn));
+console.log(typeof Number(twoBtn));
 console.log(typeof threeBtn);
 
 // 1st goal - create CE(clear) button
