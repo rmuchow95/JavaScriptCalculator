@@ -3,12 +3,6 @@ function setInputValue(btnValue) {
   screenInput.value = btnValue;
 }
 
-function convertStringToNumber() {
-  Number(oneBtn);
-  Number(twoBtn);
-  Number(threeBtn);
-}
-
 let oneBtn = document.getElementById("one-btn");
 oneBtn.addEventListener("click", (e) => {
   console.log(e.target.textContent);
@@ -32,16 +26,17 @@ clearBtn.addEventListener("click", (e) => {
   setInputValue(" ");
 });
 
-console.log(typeof oneBtn.textContent);
+//Convert variable to number
+let oneNum = Number(oneBtn);
+let twoNum = Number(twoBtn);
+let threeNum = Number(threeBtn);
+
+console.log(typeof threeBtn.textContent);
 console.log(typeof Number(oneBtn));
 console.log(typeof Number(twoBtn));
-console.log(typeof threeBtn);
-
-// 1st goal - create CE(clear) button
-// click on any button
-// value just clicked should show up in input
-// click on CE
-// value input should be clear
+console.log(typeof Number(threeBtn));
+console.log(typeof oneNum);
+console.log(typeof twoNum);
 
 // 2nd goal - add 1 + 1 to equal 2
 // click on number 1
