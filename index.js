@@ -26,7 +26,12 @@ clearBtn.addEventListener("click", (e) => {
   setInputValue(" ");
 });
 
-//Convert variable to number (change--only two variables for the two operands in function)
+let add = document.getElementById("add");
+add.addEventListener("click", (e) => {
+  console.log(e.target.textContent);
+});
+
+//Convert variable to number (eventually change--only two variables for the two operands in function)
 debugger;
 let oneNum = Number(oneBtn.innerText);
 let twoNum = Number(twoBtn.innerText);
