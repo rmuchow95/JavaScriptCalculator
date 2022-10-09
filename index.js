@@ -1,16 +1,29 @@
-let firstOperand = document.getElementById("screen-input");
-let secondOperand = document.getElementById("screen-input");
-let mathSymbol = document.getElementById("screen-input");
+let firstOperand = null;
+let secondOperand = null;
+let symbol = "";
+const screenInput = document.getElementById("screen-input");
+
+console.log("operand values: ", firstOperand, secondOperand);
 
 function setInputValue(btnValue) {
-  const screenInput = document.getElementById("screen-input");
-  screenInput.value = Number(btnValue);
+  let inputValue = Number(btnValue);
+
+  screenInput.value = inputValue;
+
+  if (firstOperand == null) {
+    firstOperand = inputValue;
+  } else if (secondOperand == null) {
+    secondOperand = inputValue;
+  }
 }
 
-function calculateDecision(mathSymbol) {
-  switch (mathSymbol) {
-    case "add":
-      console.log(firstOperand + secondOperand);
+function calculateDecision() {
+  let total = 0;
+  switch (symbol) {
+    case "+":
+      screenInput.value = firstOperand + secondOperand;
+      console.log("total: ", total);
+      break;
   }
 }
 
@@ -35,40 +48,25 @@ threeBtn.addEventListener("click", (e) => {
 const clearBtn = document.getElementById("ce-btn");
 clearBtn.addEventListener("click", (e) => {
   setInputValue("0");
+  firstOperand = null;
+  secondOperand = null;
+  symbol = "";
 });
 
 const add = document.getElementById("add");
 add.addEventListener("click", (e) => {
-  firstOperand + secondOperand;
-  console.log("Addition Symbol: ", e.target.textContent);
+  symbol = e.target.textContent;
+  console.log("Addition Symbol: ", symbol);
 });
 
 const equals = document.getElementById("equals");
-equals.addEventListener("click", (e) => {
-  console.log(e.target.textContent);
-});
+equals.addEventListener("click", calculateDecision);
 
 //Convert variable to number (eventually change--only two variables for the two operands in function)
 debugger;
 
-console.log(typeof threeBtn.textContent);
-console.log(typeof Number(oneBtn));
-console.log(typeof Number(twoBtn));
-console.log(typeof Number(threeBtn));
-console.log(typeof oneNum);
-console.log(typeof twoNum);
-console.log(typeof threeNum);
 //add two "number" variables together
 //console.log("oneNum + twoNum: ", oneNum + twoNum);
-console.log(Number(oneBtn) + Number(twoBtn));
-
-// 2nd goal - add 1 + 1 to equal 2
-// click on number 1
-// click on +
-// click on 1
-// click on =
-// number in input should read as 2
-//**create two variables for two operands, not variable for every single number**
 
 //10/9/222
 // create function that handles calculation type, takes in symbol as input
