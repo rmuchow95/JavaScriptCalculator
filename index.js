@@ -45,6 +45,48 @@ threeBtn.addEventListener("click", (e) => {
   console.log(e.target.textContent);
 });
 
+let fourBtn = document.getElementById("four-btn");
+fourBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let fiveBtn = document.getElementById("five-btn");
+fiveBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let sixBtn = document.getElementById("six-btn");
+sixBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let sevenBtn = document.getElementById("seven-btn");
+sevenBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let eightBtn = document.getElementById("eight-btn");
+eightBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let nineBtn = document.getElementById("nine-btn");
+nineBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
+let zeroBtn = document.getElementById("zero-btn");
+zeroBtn.addEventListener("click", (e) => {
+  setInputValue(e.target.textContent);
+  console.log(e.target.textContent);
+});
+
 const clearBtn = document.getElementById("ce-btn");
 clearBtn.addEventListener("click", (e) => {
   setInputValue("0");
@@ -63,7 +105,7 @@ const equals = document.getElementById("equals");
 equals.addEventListener("click", calculateDecision);
 
 //Convert variable to number (eventually change--only two variables for the two operands in function)
-debugger;
+//debugger;
 
 //add two "number" variables together
 //console.log("oneNum + twoNum: ", oneNum + twoNum);
@@ -71,5 +113,4 @@ debugger;
 //10/9/222
 // create function that handles calculation type, takes in symbol as input
 // add switch statement that decides which calculation to do
-// for each type of calculation(eg. +, - etc), create a function that performs arithmetic
-// one function for adding, subtracting, multiplying, dividing
+// for each type of calculation(eg. +, - etc), create a function that performs calculation--one function for adding, subtracting, multiplying, dividing
