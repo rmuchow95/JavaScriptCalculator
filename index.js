@@ -15,6 +15,10 @@ function setInputValue(btnValue) {
   } else if (secondOperand == null) {
     secondOperand = inputValue;
   }
+
+  if ((inputValue = Number())) {
+    inputValue = firstOperand + secondOperand;
+  }
 }
 
 function calculateDecision() {
@@ -104,10 +108,8 @@ add.addEventListener("click", (e) => {
 const equals = document.getElementById("equals");
 equals.addEventListener("click", calculateDecision);
 
-//Convert variable to number (eventually change--only two variables for the two operands in function)
 //debugger;
 
-//add two "number" variables together
 //console.log("oneNum + twoNum: ", oneNum + twoNum);
 
 //10/9/222
