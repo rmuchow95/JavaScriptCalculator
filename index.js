@@ -28,10 +28,13 @@ function calculateDecision() {
     case "-":
       screenInput.value = firstOperand - secondOperand;
       console.log("total: ", total);
+      break;
     case "*":
       screenInput.value = firstOperand * secondOperand;
-    case "/":
+      break;
+    case "÷":
       screenInput.value = firstOperand / secondOperand;
+      break;
   }
 }
 
