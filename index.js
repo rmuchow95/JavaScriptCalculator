@@ -15,12 +15,9 @@ function setInputValue(btnValue) {
   } else if (secondOperand == null) {
     secondOperand = inputValue;
   }
-
-  if ((inputValue = Number())) {
-    inputValue = firstOperand + secondOperand;
-  }
 }
 
+//Function to complete Operations:
 function calculateDecision() {
   let total = 0;
   switch (symbol) {
@@ -28,6 +25,13 @@ function calculateDecision() {
       screenInput.value = firstOperand + secondOperand;
       console.log("total: ", total);
       break;
+    case "-":
+      screenInput.value = firstOperand - secondOperand;
+      console.log("total: ", total);
+    case "*":
+      screenInput.value = firstOperand * secondOperand;
+    case "/":
+      screenInput.value = firstOperand / secondOperand;
   }
 }
 
@@ -105,14 +109,25 @@ add.addEventListener("click", (e) => {
   console.log("Addition Symbol: ", symbol);
 });
 
+const subtract = document.getElementById("subtract");
+subtract.addEventListener("click", (e) => {
+  symbol = e.target.textContent;
+  console.log("Subtraction Symbol: ", symbol);
+});
+
+const multiply = document.getElementById("multiply");
+multiply.addEventListener("click", (e) => {
+  symbol = e.target.textContent;
+  console.log("Multiplication Symbol: ", symbol);
+});
+
+const divide = document.getElementById("divide");
+divide.addEventListener("click", (e) => {
+  symbol = e.target.textContent;
+  console.log("Division Symbol: ", symbol);
+});
+
 const equals = document.getElementById("equals");
 equals.addEventListener("click", calculateDecision);
 
 //debugger;
-
-//console.log("oneNum + twoNum: ", oneNum + twoNum);
-
-//10/9/222
-// create function that handles calculation type, takes in symbol as input
-// add switch statement that decides which calculation to do
-// for each type of calculation(eg. +, - etc), create a function that performs calculation--one function for adding, subtracting, multiplying, dividing
