@@ -50,10 +50,10 @@ function calculateDecision() {
 
 //Make one class for all numbers
 
-debugger;
+//debugger;
 
 let numberBtn = document.getElementsByClassName("number");
-for (let item of numberBtn) {
+for (let i = 0; i < numberBtn.length; i++) {
   numberBtn.addEventListener("click", (e) => {
     setInputValue(e.target.textContent);
     console.log(e.target.textContent);
@@ -119,13 +119,13 @@ for (let item of numberBtn) {
 //   console.log(e.target.textContent);
 // });
 
-// const clearBtn = document.getElementById("ce-btn");
-// clearBtn.addEventListener("click", (e) => {
-//   firstOperand = null;
-//   secondOperand = null;
-//   symbol = "";
-//   screenInput.value = "0";
-// });
+const clearBtn = document.getElementById("ce-btn");
+clearBtn.addEventListener("click", (e) => {
+  firstOperand = null;
+  secondOperand = null;
+  symbol = "";
+  screenInput.value = "0";
+});
 
 const add = document.getElementById("add");
 add.addEventListener("click", (e) => {
