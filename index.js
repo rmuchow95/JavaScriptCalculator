@@ -7,21 +7,26 @@ const screenInput = document.getElementById("screen-input");
 console.log("operand values: ", firstOperand, secondOperand);
 
 function setInputValue(btnValue) {
-  //let inputValue = btnValue;
+  // let inputValue = btnValue;
+  //**Will only check secondOperand if last button pressed was number**
+
   if (lastButton == "operator" || secondOperand) {
-    if (secondOperand == null) {
-      secondOperand = btnValue;
-    } else {
-      secondOperand += btnValue;
-    }
-    screenInput.value = secondOperand;
-  } else {
     if (firstOperand == null) {
       firstOperand = btnValue;
     } else {
       firstOperand += btnValue;
     }
     screenInput.value = firstOperand;
+
+    // } else if (lastButton == "operator" && secondOperand) {
+    //   screenInput.value = parseFloat(secondOperand) + parseFloat(secondOperand);
+  } else {
+    if (secondOperand == null) {
+      secondOperand = btnValue;
+    } else {
+      secondOperand += btnValue;
+    }
+    screenInput.value = secondOperand;
   }
   lastButton = "number";
 }
@@ -50,8 +55,6 @@ function calculateDecision() {
 
 //Make one class for all numbers
 
-//debugger;
-
 let numberBtn = document.getElementsByClassName("number");
 for (let i = 0; i < numberBtn.length; i++) {
   numberBtn[i].addEventListener("click", (e) => {
@@ -72,6 +75,11 @@ const add = document.getElementById("add");
 add.addEventListener("click", (e) => {
   symbol = e.target.textContent;
   lastButton = "operator";
+
+  if (firstOperand && secondOperand) {
+    screenInput.value = parseFloat(firstOperand) + parseFloat(secondOperand);
+    firstOperand = screenInput.value;
+  }
   console.log("Addition Symbol: ", symbol);
 });
 
