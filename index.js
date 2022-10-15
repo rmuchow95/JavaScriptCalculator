@@ -11,22 +11,22 @@ function setInputValue(btnValue) {
   //**Will only check secondOperand if last button pressed was number**
 
   if (lastButton == "operator" || secondOperand) {
-    if (firstOperand == null) {
-      firstOperand = btnValue;
-    } else {
-      firstOperand += btnValue;
-    }
-    screenInput.value = firstOperand;
-
-    // } else if (lastButton == "operator" && secondOperand) {
-    //   screenInput.value = parseFloat(secondOperand) + parseFloat(secondOperand);
-  } else {
     if (secondOperand == null) {
       secondOperand = btnValue;
     } else {
       secondOperand += btnValue;
     }
     screenInput.value = secondOperand;
+
+    // } else if (lastButton == "operator" && secondOperand) {
+    //   screenInput.value = parseFloat(secondOperand) + parseFloat(secondOperand);
+  } else {
+    if (firstOperand == null) {
+      firstOperand = btnValue;
+    } else {
+      firstOperand += btnValue;
+    }
+    screenInput.value = firstOperand;
   }
   lastButton = "number";
 }
@@ -69,6 +69,7 @@ clearBtn.addEventListener("click", (e) => {
   secondOperand = null;
   symbol = "";
   screenInput.value = "0";
+  lastButton = "";
 });
 
 const add = document.getElementById("add");
