@@ -23,3 +23,5 @@ displays the number 5
 firstOperand = 5
 secondOperand = null
 operator = "+"
+
+Test Case 2:

@@ -80,6 +80,7 @@ add.addEventListener("click", (e) => {
   if (firstOperand && secondOperand) {
     screenInput.value = parseFloat(firstOperand) + parseFloat(secondOperand);
     firstOperand = screenInput.value;
+    secondOperand = null;
   }
   console.log("Addition Symbol: ", symbol);
 });
