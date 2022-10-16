@@ -89,6 +89,12 @@ const subtract = document.getElementById("subtract");
 subtract.addEventListener("click", (e) => {
   symbol = e.target.textContent;
   lastButton = "operator";
+
+  if (firstOperand && secondOperand) {
+    screenInput.value = parseFloat(firstOperand) - parseFloat(secondOperand);
+    firstOperand = screenInput.value;
+    secondOperand = null;
+  }
   console.log("Subtraction Symbol: ", symbol);
 });
 
