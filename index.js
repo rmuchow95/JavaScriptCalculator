@@ -102,6 +102,12 @@ const multiply = document.getElementById("multiply");
 multiply.addEventListener("click", (e) => {
   symbol = e.target.textContent;
   lastButton = "operator";
+
+  if (firstOperand && secondOperand) {
+    screenInput.value = parseFloat(firstOperand) * parseFloat(secondOperand);
+    firstOperand = screenInput.value;
+    secondOperand = null;
+  }
   console.log("Multiplication Symbol: ", symbol);
 });
 
@@ -109,6 +115,12 @@ const divide = document.getElementById("divide");
 divide.addEventListener("click", (e) => {
   symbol = e.target.textContent;
   lastButton = "operator";
+
+  if (firstOperand && secondOperand) {
+    screenInput.value = parseFloat(firstOperand) / parseFloat(secondOperand);
+    firstOperand = screenInput.value;
+    secondOperand = null;
+  }
   console.log("Division Symbol: ", symbol);
 });
 
