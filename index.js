@@ -17,9 +17,6 @@ function setInputValue(btnValue) {
       secondOperand += btnValue;
     }
     screenInput.value = secondOperand;
-
-    // } else if (lastButton == "operator" && secondOperand) {
-    //   screenInput.value = parseFloat(secondOperand) + parseFloat(secondOperand);
   } else {
     if (firstOperand == null) {
       firstOperand = btnValue;
@@ -48,6 +45,7 @@ function calculateDecision() {
       break;
     case "÷":
       screenInput.value = firstOperand / secondOperand;
+      console.log("total: ", total);
       break;
   }
   lastButton = "";
@@ -122,6 +120,11 @@ divide.addEventListener("click", (e) => {
     secondOperand = null;
   }
   console.log("Division Symbol: ", symbol);
+});
+
+const decimal = document.getElementById("decimal");
+decimal.addEventListener("click", (e) => {
+  screenInput.value += ".";
 });
 
 const equals = document.getElementById("equals");
