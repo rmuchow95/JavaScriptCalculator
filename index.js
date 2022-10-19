@@ -7,9 +7,6 @@ const screenInput = document.getElementById("screen-input");
 console.log("operand values: ", firstOperand, secondOperand);
 
 function setInputValue(btnValue) {
-  // let inputValue = btnValue;
-  //**Will only check secondOperand if last button pressed was number**
-
   if (lastButton == "operator" || secondOperand) {
     if (secondOperand == null) {
       secondOperand = btnValue;
@@ -60,6 +57,23 @@ for (let i = 0; i < numberBtn.length; i++) {
     console.log(e.target.textContent);
   });
 }
+
+//code for decimal
+
+const decimal = document.getElementById("decimal");
+decimal.addEventListener("click", (e) => {
+  screenInput.value += ".";
+
+  if (firstOperand == null) {
+    screenInput.value = ".";
+  }
+  if ((lastButton = operator)) {
+    screenInput.value = secondOperand + ".";
+  }
+  if (lastButton != operator) {
+    screenInput.value = firstOperand + ".";
+  }
+});
 
 const clearBtn = document.getElementById("ce-btn");
 clearBtn.addEventListener("click", (e) => {
@@ -120,11 +134,6 @@ divide.addEventListener("click", (e) => {
     secondOperand = null;
   }
   console.log("Division Symbol: ", symbol);
-});
-
-const decimal = document.getElementById("decimal");
-decimal.addEventListener("click", (e) => {
-  screenInput.value += ".";
 });
 
 const equals = document.getElementById("equals");
