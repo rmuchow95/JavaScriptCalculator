@@ -45,3 +45,6 @@ displays the number 7
 STEP 5
 User presses the 7 button
 ??
+
+Notes: 10/19
+//Got it to display 7, but when pressing \* and 7, it does not say 49, it concatenates--probably occurring within setInputValue function
