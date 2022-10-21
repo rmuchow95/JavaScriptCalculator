@@ -115,6 +115,8 @@ multiply.addEventListener("click", (e) => {
   if (symbol != "*") {
     calculateSymbol(symbol);
     symbol = e.target.textContent;
+    firstOperand = screenInput.value;
+    secondOperand = null;
     lastButton = "operator";
   } else if (firstOperand && secondOperand) {
     calculateSymbol(symbol);
