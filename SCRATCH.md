@@ -10,6 +10,7 @@ firstOperand = 2
 
 STEP 2
 User presses the "+" button
+secondOperand = null
 operator = "+"
 
 STEP 3

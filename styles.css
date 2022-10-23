@@ -1,3 +1,18 @@
+.header {
+  font-family: Helvetica;
+  font-size: 20px;
+  text-align: center;
+}
+
+.text-box {
+  width: 180px;
+  height: 60px;
+  margin: auto;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -13,6 +28,8 @@
   margin: 10px;
   padding: 20px;
   font-size: 25px;
+  font-family: Helvetica;
   flex-wrap: wrap;
   flex-grow: 0;
+  font-weight: bold;
 }
