@@ -99,13 +99,17 @@ add.addEventListener("click", (e) => {
 
 const subtract = document.getElementById("subtract");
 subtract.addEventListener("click", (e) => {
-  symbol = e.target.textContent;
-  lastButton = "operator";
-
-  if (firstOperand && secondOperand) {
-    screenInput.value = parseFloat(firstOperand) - parseFloat(secondOperand);
+  if (symbol != "-") {
+    calculateSymbol(symbol);
+    symbol = e.target.textContent;
     firstOperand = screenInput.value;
     secondOperand = null;
+    lastButton = "operator";
+  } else if (firstOperand && secondOperand) {
+    calculateSymbol(symbol);
+    firstOperand = screenInput.value;
+    secondOperand = null;
+    lastButton = "operator";
   }
   console.log("Subtraction Symbol: ", symbol);
 });
@@ -129,13 +133,17 @@ multiply.addEventListener("click", (e) => {
 
 const divide = document.getElementById("divide");
 divide.addEventListener("click", (e) => {
-  symbol = e.target.textContent;
-  lastButton = "operator";
-
-  if (firstOperand && secondOperand) {
-    screenInput.value = parseFloat(firstOperand) / parseFloat(secondOperand);
+  if (symbol != "÷") {
+    calculateSymbol(symbol);
+    symbol = e.target.textContent;
     firstOperand = screenInput.value;
     secondOperand = null;
+    lastButton = "operator";
+  } else if (firstOperand && secondOperand) {
+    calculateSymbol(symbol);
+    firstOperand = screenInput.value;
+    secondOperand = null;
+    lastButton = "operator";
   }
   console.log("Division Symbol: ", symbol);
 });
