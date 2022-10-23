@@ -2,13 +2,14 @@ let firstOperand = null;
 let secondOperand = null;
 let symbol = "";
 let lastButton = "";
+let hasDecimal = false;
 const screenInput = document.getElementById("screen-input");
 
 console.log("operand values: ", firstOperand, secondOperand);
 
 function setInputValue(btnValue) {
-  if (lastButton == "operator" || secondOperand) {
-    if (secondOperand == null) {
+  if (lastButton === "operator" || secondOperand) {
+    if (secondOperand === null) {
       secondOperand = btnValue;
     } else {
       secondOperand += btnValue;
@@ -42,7 +43,8 @@ function calculateDecision() {
       break;
     case "÷":
       screenInput.value = firstOperand / secondOperand;
-      console.log("total: ", total);
+      return screenInput.value.toFixed(3);
+      console.log("total: ", screenInput.value.toFixed(3));
       break;
   }
   lastButton = "";
@@ -62,17 +64,7 @@ for (let i = 0; i < numberBtn.length; i++) {
 
 const decimal = document.getElementById("decimal");
 decimal.addEventListener("click", (e) => {
-  screenInput.value += ".";
-
-  if (firstOperand == null) {
-    screenInput.value = ".";
-  }
-  if ((lastButton = operator)) {
-    screenInput.value = secondOperand + ".";
-  }
-  if (lastButton != operator) {
-    screenInput.value = firstOperand + ".";
-  }
+  setInputValue(e.target.textContent);
 });
 
 const clearBtn = document.getElementById("ce-btn");
