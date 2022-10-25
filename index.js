@@ -2,7 +2,6 @@ let firstOperand = null;
 let secondOperand = null;
 let symbol = "";
 let lastButton = "";
-let hasDecimal = false;
 const screenInput = document.getElementById("screen-input");
 
 console.log("operand values: ", firstOperand, secondOperand);
