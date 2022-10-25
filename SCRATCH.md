@@ -79,3 +79,23 @@ Notes: 10/19
 
 Notes: 10/21
 //When another operator is pressed, calculate the two operands and assign this value to firstOperand, assign secondOperand to null.
+
+10/24: Decimals--Test Case 1
+
+1 / 3 = 0.333
+
+STEP 1: Press the 1 button
+Expected: 1 appears in display
+Result: it works!
+
+STEP 2: Press the "/" button
+Expected: Nothing--1 still shows in display
+Result: It works
+
+STEP 3: Press the 3 button
+Expected: 3 appears in display
+Result: IT WORKS!
+
+STEP 4: Press the equals button
+Expected: 0.333 appears in display
+Result: It does not work

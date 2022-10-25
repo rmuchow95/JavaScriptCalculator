@@ -42,9 +42,9 @@ function calculateDecision() {
       screenInput.value = firstOperand * secondOperand;
       break;
     case "÷":
-      screenInput.value = firstOperand / secondOperand;
-      return screenInput.value.toFixed(3);
-      console.log("total: ", screenInput.value.toFixed(3));
+      const result = firstOperand / secondOperand;
+      screenInput.value = result.toFixed(3);
+      console.log("total: ", total);
       break;
   }
   lastButton = "";
